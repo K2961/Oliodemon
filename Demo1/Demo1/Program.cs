@@ -10,7 +10,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus4();
+            Harjoitus5();
 
             Console.ReadLine();
         }
@@ -126,6 +126,21 @@ namespace Demo1
             {
                 Console.Write("Alaikäinen");
             }
+        }
+
+        //Harjoitus 5 alkaa
+
+        static void Harjoitus5()
+        {
+            Console.Write("Anna sekunnit: ");
+
+            int sekunnit = int.Parse(Console.ReadLine());
+
+            int tun = sekunnit / 3600;
+            int min =  sekunnit / 60 % 60;
+            int sek = sekunnit % 60;
+
+            Console.Write("Antamasi sekunttiaika voidaan ilmaista muodossa: " + tun + "  Tuntia  " + min + "  Minuuttia  " + sek + "  Sekunttia." + "\nHienommin merkattuna:  " + tun + ":" + min + ":" + sek);
         }
     }
 }
