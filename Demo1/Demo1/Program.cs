@@ -11,7 +11,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus1();
+            Harjoitus7();
 
             Console.ReadLine();
         }
@@ -171,6 +171,24 @@ namespace Demo1
 
             Console.Write("Bensaa kuluu " + Math.Round(litrat, 2) + " litraa, kustannus " + Math.Round(kustannus, 2) + " euroa.");
 
+        }
+        /// <summary>
+        ///  Tee ohjelma, joka näyttää onko annettu vuosi karkausvuosi. Vuosiluku kysytään käyttäjältä.
+        /// Algoritmi
+        /// 4:llä jaolliset on, paitsi täydet vuosisadat.Kuitenkin 400:lla jaolliset vuosisadat ovat
+        /// Esim. 1991 -> ei, 1992 -> on, 1900 -> ei, 2000 -> on
+        /// </summary>
+        static void Harjoitus7()
+        {
+            Console.Write("Anna vuosi muodossa vvvv: ");
+
+            int vuosi = int.Parse(Console.ReadLine());
+
+            if ((vuosi % 4 == 0 && vuosi % 100 != 0) || vuosi % 400 == 0)
+            {
+                Console.Write("Vuosi on karkausvuosi.");
+            }
+            else Console.Write("Vuosi ei ole karkausvuosi!");
         }
     }
 }
