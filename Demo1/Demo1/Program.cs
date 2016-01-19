@@ -10,7 +10,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus3();
+            Harjoitus4();
 
             Console.ReadLine();
         }
@@ -106,6 +106,26 @@ namespace Demo1
 
             Console.Write("Lukujen summa on:  " + ( luku1 + luku2 + luku3));
 
+        }
+        // Harjoitus 4 alkaa
+        static void Harjoitus4()
+        {
+            Console.Write("Anna ikäsi: ");
+            int ika = int.Parse(Console.ReadLine());
+
+            if (ika > 65)
+            {
+                Console.Write("Seniori");
+            }
+            else if (ika > 18)
+            {
+                Console.Write("Aikuinen");
+            }
+            else if 
+            (ika < 18)
+            {
+                Console.Write("Alaikäinen");
+            }
         }
     }
 }
