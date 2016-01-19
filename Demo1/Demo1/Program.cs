@@ -10,7 +10,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus2();
+            Harjoitus3();
 
             Console.ReadLine();
         }
@@ -87,6 +87,25 @@ namespace Demo1
                     Console.Write("Koulunumero on: " + numero);
                     break;
             }
+        }
+
+        // Tehtävä 3 alkaa !
+
+        static void Harjoitus3()
+        {
+            Console.Write("Anna kolme lukua: ");
+
+            Console.Write("Anna Ensimmainen luku: ");
+            int luku1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Anna Toinen luku: ");
+            int luku2 = int.Parse(Console.ReadLine());
+
+            Console.Write("Anna Kolmas luku: ");
+            int luku3 = int.Parse(Console.ReadLine());
+
+            Console.Write("Lukujen summa on:  " + ( luku1 + luku2 + luku3));
+
         }
     }
 }
