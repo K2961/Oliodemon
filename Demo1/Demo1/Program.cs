@@ -11,7 +11,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus8();
+            Harjoitus9();
 
             Console.ReadLine();
         }
@@ -232,6 +232,44 @@ namespace Demo1
 
             Console.Write("Suurin luku on: " + a);
         }
-        
+
+        /// <summary>
+        /// Tehtävä 9
+        /// Tee ohjelma, joka kysyy käyttäjältä lukuja, kunnes hän syöttää luvun 0. Ohjelman tulee tulostaa syötettyjen lukujen summa.
+        /// Esimerkkitoiminta:
+        /// Anna Luku > 10 [Enter]
+        /// Anna Luku > 20 [Enter]
+        /// Anna Luku > 30 [Enter]
+        /// Anna Luku > 0 [Enter]
+        /// Lukujen summa on 60
+        /// </summary>
+        static void Harjoitus9()
+        {
+            int Toisto = 1;
+            int Luku = 0;
+            int Summa = 0;
+
+            Console.Write("Lukujen yhteenlasku.\n");
+            Console.Write("Jos haluat lopettaa anna numeroksi nolla '0'\n");
+
+            while (Toisto != 0)
+            {
+                Console.Write("\nAnna luku: ");
+
+                Luku = int.Parse(Console.ReadLine());
+
+                if (Luku == 0)
+                {
+                    Toisto = 0;
+                    Console.Write("\nHalusit poistua vai? Hyvästi!");
+                }
+                else
+                {
+                    Summa += Luku;
+
+                    Console.Write("Lukujen summa on: " + Summa); 
+                }
+            }
+        }
     }
 }
