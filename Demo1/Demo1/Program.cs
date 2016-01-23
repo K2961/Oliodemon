@@ -11,7 +11,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus7();
+            Harjoitus8();
 
             Console.ReadLine();
         }
@@ -190,5 +190,48 @@ namespace Demo1
             }
             else Console.Write("Vuosi ei ole karkausvuosi!");
         }
+
+        /// <summary>
+        /// Tehtävä 8
+        /// Tee ohjelma, joka kysyy käyttäjältä 3 kokonaislukua ja tulostaa niistä suurimman.
+        /// Esimerkkitoiminta:
+        /// Anna Luku > 5 [Enter]
+        /// Anna Luku > 15 [Enter]
+        /// Anna Luku > 7 [Enter]
+        /// Suurin luku on 15
+        /// </summary>
+
+        static void Harjoitus8()
+        {
+            int a;
+
+            Console.Write("Tämä ohjelma vertaa kolmea lukua ja ilmoittaa suurimman luvun\n");
+
+            Console.Write("Anna ensimmäinen luku: ");
+            int Luku1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Anna toinen luku: ");
+            int Luku2 = int.Parse(Console.ReadLine());
+
+            Console.Write("Anna kolmas luku: ");
+            int Luku3 = int.Parse(Console.ReadLine());
+
+            if ((Luku1 > Luku2) && (Luku1 > Luku3))
+            {
+                a = Luku1;
+            }
+
+            else if ((Luku2 > Luku1) && (Luku2 > Luku3))
+            {
+                a = Luku2;
+            }
+            else
+            {
+                a = Luku3;
+            }
+
+            Console.Write("Suurin luku on: " + a);
+        }
+        
     }
 }
