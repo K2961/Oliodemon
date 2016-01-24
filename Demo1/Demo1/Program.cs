@@ -279,12 +279,23 @@ namespace Demo1
         /// </summary>
         static void Harjoitus10()
         {
-            int[] arvot = { 1, 2, 33, 44, 55, 68, 77, 96, 100};
-            foreach (int arvo in arvot)
-            if (arvo % 2 == 0)
+            /* int[] arvot = { 1, 2, 33, 44, 55, 68, 77, 96, 100};
+             foreach (int arvo in arvot)
+             if (arvo % 2 == 0)
+                 {
+                     Console.Write(" HEP: " + arvo);
+                 }
+             */
+
+            int[] arvot = { 1, 2, 33, 44, 55, 68, 77, 96, 100 };
+            for (int i = 0; i < 9; i++)
+            {
+                int arvo = arvot[i];
+                if (arvo % 2 == 0)
                 {
                     Console.Write(" HEP: " + arvo);
                 }
+            }
         }
     }
 }
