@@ -11,7 +11,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus10();
+            Harjoitus11();
 
             Console.ReadLine();
         }
@@ -296,6 +296,41 @@ namespace Demo1
                     Console.Write(" HEP: " + arvo);
                 }
             }
+        }
+
+        /// <summary>
+        /// Tehtävä 1
+        /// Tee kahden sisäkkäisen for-silmukan avulla ohjelma, joka tulostaa seuraavanlaisen kuvion:
+        /// *
+        /// **
+        /// ***
+        /// ****
+        /// *****
+        /// Käyttäjä antaa syötteenä tähtirivien lukumäärän.Yllä olevassa esimerkissä käyttäjä on syöttänyt luvun 5.
+        /// Esimerkkitoiminta:
+        /// Anna Luku > 3 [Enter]
+        /// *
+        /// **
+        /// ***
+        /// </summary>
+        /// 
+        static void Harjoitus11()
+        {
+            Console.Write("Anna luku:  ");
+
+            int maara;
+
+            maara = int.Parse(Console.ReadLine());
+
+            for (int ylos = 0; ylos < maara; ylos++)
+            {
+                for (int sivul = 0; sivul <= ylos; sivul++)
+                
+                    Console.Write("*");
+                    Console.WriteLine();
+                
+            }
+
         }
     }
 }
