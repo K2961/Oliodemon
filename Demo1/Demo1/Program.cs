@@ -11,7 +11,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus9();
+            Harjoitus10();
 
             Console.ReadLine();
         }
@@ -270,6 +270,21 @@ namespace Demo1
                     Console.Write("Lukujen summa on: " + Summa); 
                 }
             }
+        }
+
+        /// <summary>
+        /// Tehtävä 10
+        /// Tee ohjelma, joka alustaa sovellukseen käyttöö seuraavan taulukon arvot = [1, 2, 33, 44, 55, 68, 77, 96, 100].
+        /// Käy sovelluksessa taulukko läpi ja tulosta ruutuun "HEP"-sana aina kun taulukossa oleva luku on parillinen.
+        /// </summary>
+        static void Harjoitus10()
+        {
+            int[] arvot = { 1, 2, 33, 44, 55, 68, 77, 96, 100};
+            foreach (int arvo in arvot)
+            if (arvo % 2 == 0)
+                {
+                    Console.Write(" HEP: " + arvo);
+                }
         }
     }
 }
