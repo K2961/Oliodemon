@@ -10,6 +10,9 @@ namespace Demo4
     {
         static void Main(string[] args)
         {
+            Person somebody = new Person("John", "Unknown");
+            somebody.PersonMethod();
+            Console.WriteLine();
         }
     }
 }

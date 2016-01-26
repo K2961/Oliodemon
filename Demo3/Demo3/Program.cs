@@ -12,12 +12,9 @@ namespace Demo3
         public int Speed { get; set; }
         public int Tyres { get; set; }
 
-        public Vehicle(string name, int speed, int tyres)
+        public override string ToString()
         {
-            Name = name;
-            Speed = speed;
-            Tyres = tyres;
-
+            return Name + " " + " " + Speed + " " + " " + Tyres;
         }
 
         public void PrintData()
@@ -45,6 +42,8 @@ namespace Demo3
 
             mopo.PrintData();
             traktori.PrintData();
+            Console.Write(mopo.ToString());
+            Console.Write(traktori.ToString());
             Console.ReadLine();
            
 
