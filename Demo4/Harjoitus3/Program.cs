@@ -17,6 +17,16 @@ namespace Harjoitus3
             jussi.Salary -= 2000.0f;
             jussi.Bonus = 1000.0f;
             //kirsi.Bonus = nocando
+
+            ShowSomeWork(kirsi);
+            ShowSomeWork(jussi);
+
+            Console.ReadLine();
+        }
+
+        static void ShowSomeWork(Employee empl)
+        {
+            empl.Work();
         }
     }
 }

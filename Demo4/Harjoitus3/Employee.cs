@@ -22,6 +22,10 @@ namespace Harjoitus3
             Profession = profession;
             Salary = salary;
         }
+        public virtual void Work()
+        {
+            Console.WriteLine("Working. Too much. Will die too young. Or fall into depression");
+        }
 
         private float salary;
     }

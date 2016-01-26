@@ -16,5 +16,10 @@ namespace Harjoitus3
             Car = car;
             Bonus = bonus;
         }
+
+        public override void Work()
+        {
+            Console.WriteLine("Working. Did work more previously. No need anymore. Others will work for me.");
+        }
     }
 }
