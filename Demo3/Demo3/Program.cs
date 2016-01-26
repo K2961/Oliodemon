@@ -20,36 +20,10 @@ namespace Demo3
             Console.WriteLine("\n- Tyres : " + Tyres);
         }
     }
-
-    class ToString
-    {
-
-        private string[] strings = new string[100];
-
-        public string this[int i]
-        {
-            get
-            {
-                return strings[i];
-            }
-            set
-            {
-                strings[i] = value;
-            }
-        }
-    }
     class Program
     {
         static void Main(string[] args)
         {
-
-            ToString tostring = new ToString();
-            tostring[0] = "Mopo";
-            tostring[1] = "Traktori";
-            tostring[2] = "Skoda";
-
-
-            Console.WriteLine(tostring[0]);
 
             Vehicle mopo = new Vehicle();
             mopo.Name = "Derbi 50cc";
