@@ -12,6 +12,14 @@ namespace Demo3
         public int Speed { get; set; }
         public int Tyres { get; set; }
 
+        public Vehicle(string name, int speed, int tyres)
+        {
+            Name = name;
+            Speed = speed;
+            Tyres = tyres;
+
+        }
+
         public void PrintData()
         {
             Console.WriteLine("\nVehicle data : ");
