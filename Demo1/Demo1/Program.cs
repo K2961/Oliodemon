@@ -11,7 +11,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus12();
+            Harjoitus13();
 
             Console.ReadLine();
         }
@@ -367,6 +367,22 @@ namespace Demo1
             {
                 Console.Write(luvut[x] + " ");
             }
+        }
+
+        /// <summary>
+        /// Tehtävä 13
+        /// Mäkihypyssä käytetään viittä arvostelutuomaria.Kirjoita ohjelma, joka kysyy arvostelupisteet yhdelle hypylle ja tulostaa tyylipisteiden summan siten, että summasta on vähennetty pois pienin ja suurin tyylipiste.
+        /// Esimerkkitoiminta:
+        /// Anna pisteet > 18 [Enter]
+        /// Anna pisteet > 15 [Enter]
+        /// Anna pisteet > 20 [Enter]
+        /// Anna pisteet > 19 [Enter]
+        /// Anna pisteet > 17 [Enter]
+        /// Kokonaispisteet ovat 54
+        /// </summary>
+        static void Harjoitus13()
+        {
+            Console.Write("Olet arvostelutuomari mäkihypyssä.\n" + "\nAnna pisteet: \n");
         }
     }
 }
