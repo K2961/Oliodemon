@@ -11,7 +11,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus11();
+            Harjoitus12();
 
             Console.ReadLine();
         }
@@ -347,7 +347,26 @@ namespace Demo1
 
         static void Harjoitus12()
         {
+            Console.Write("Anna 5 Lukua\n");
 
+            string []luvut = new string[6];
+            string []kysy = { "Anna luku1", "Anna luku2", "Anna luku3", "Anna luku4", "Anna luku5" };
+            int i;
+            string kysymys;
+            
+            for ( i = 0; i < 5; i++)
+            {
+                kysymys = kysy[i];
+                Console.WriteLine("\n" + kysymys);
+                luvut[i] = Console.ReadLine();
+            }
+
+            Console.Write("\nLuvut ovat: ");
+
+            for (int x = 5; x != -1; x--)
+            {
+                Console.Write(luvut[x] + " ");
+            }
         }
     }
 }
