@@ -11,7 +11,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus11();
+            Harjoitus13();
 
             Console.ReadLine();
         }
@@ -347,7 +347,42 @@ namespace Demo1
 
         static void Harjoitus12()
         {
+            Console.Write("Anna 5 Lukua\n");
 
+            string []luvut = new string[6];
+            string []kysy = { "Anna luku1", "Anna luku2", "Anna luku3", "Anna luku4", "Anna luku5" };
+            int i;
+            string kysymys;
+            
+            for ( i = 0; i < 5; i++)
+            {
+                kysymys = kysy[i];
+                Console.WriteLine("\n" + kysymys);
+                luvut[i] = Console.ReadLine();
+            }
+
+            Console.Write("\nLuvut ovat: ");
+
+            for (int x = 5; x != -1; x--)
+            {
+                Console.Write(luvut[x] + " ");
+            }
+        }
+
+        /// <summary>
+        /// Tehtävä 13
+        /// Mäkihypyssä käytetään viittä arvostelutuomaria.Kirjoita ohjelma, joka kysyy arvostelupisteet yhdelle hypylle ja tulostaa tyylipisteiden summan siten, että summasta on vähennetty pois pienin ja suurin tyylipiste.
+        /// Esimerkkitoiminta:
+        /// Anna pisteet > 18 [Enter]
+        /// Anna pisteet > 15 [Enter]
+        /// Anna pisteet > 20 [Enter]
+        /// Anna pisteet > 19 [Enter]
+        /// Anna pisteet > 17 [Enter]
+        /// Kokonaispisteet ovat 54
+        /// </summary>
+        static void Harjoitus13()
+        {
+            Console.Write("Olet arvostelutuomari mäkihypyssä.\n" + "\nAnna pisteet: \n");
         }
     }
 }
