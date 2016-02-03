@@ -64,22 +64,29 @@ namespace Demo6_Harjoitus_1
 
             const int personCount = 10;
 
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+
             for (int i = 0; i < personCount; i++)
             {
                 Person p = new Person(RandomString(12), RandomString(4), RandomString(8), rand.Next(1,100), rand.Next(30,140), rand.Next(100,220));
                 persons.Add(p);
             }
 
-            Stopwatch watch = new Stopwatch();
-            watch.Start();
-            foreach(Person somebody in persons)
-            {
-                Console.Write(somebody.ToString());
-            }
-
             watch.Stop();
             Console.WriteLine("\nAdding persons took " + watch.ElapsedMilliseconds + "ms");
 
+            watch.Restart();
+
+            
+           foreach (Person somebody in persons)
+            {
+                Console.Write(somebody.ToString());
+            }
+            
+
+            
+            
             r.Next();
 
             for (int i = 0; i < 1000; i++)
@@ -91,6 +98,9 @@ namespace Demo6_Harjoitus_1
                     Console.WriteLine("Found person with firstname " + nameToFind + " : " + p.ToString());
                 }
             }
+
+            watch.Stop();
+            Console.WriteLine("\nFound person took " + watch.ElapsedMilliseconds + "ms");
 
             Console.ReadLine();
         }
