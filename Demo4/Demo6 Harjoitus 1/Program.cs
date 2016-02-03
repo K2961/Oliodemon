@@ -16,7 +16,19 @@ namespace Demo6_Harjoitus_1
             string ret = "";
             for (int i = 0; i < length; i++)
             {
-                ret += (char)rand.Next('A', 'Z');
+                int r = rand.Next(0, 2);
+                if (rand.Next(0, 1) == 0)
+                {
+                    ret += (char)rand.Next('A', 'Z');
+                }
+                else if (r == 1)
+                {
+                    ret += (char)rand.Next('a', 'z');
+                }
+                else if (r == 2)
+                {
+                    ret += (char)rand.Next('0', '1');
+                }
             }
             return ret;
         }
@@ -62,7 +74,7 @@ namespace Demo6_Harjoitus_1
 
             List<Person> persons = new List<Person>();
 
-            const int personCount = 10;
+            const int personCount = 10000;
 
             Stopwatch watch = new Stopwatch();
             watch.Start();
@@ -81,27 +93,62 @@ namespace Demo6_Harjoitus_1
             
            foreach (Person somebody in persons)
             {
-                Console.Write(somebody.ToString());
+                //Console.Write(somebody.ToString());
             }
-            
-
-            
-            
+             
             r.Next();
 
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10000; i++)
             {
                 string nameToFind = RandomString(4);
                 Person p = persons.Find(x => x.FirstName == nameToFind);
                 if (p != null)
                 {
-                    Console.WriteLine("Found person with firstname " + nameToFind + " : " + p.ToString());
+                    //Console.WriteLine("Found person with firstname " + nameToFind + " : " + p.ToString());
                 }
             }
 
             watch.Stop();
-            Console.WriteLine("\nFound person took " + watch.ElapsedMilliseconds + "ms");
+            //Console.WriteLine("\nFound person took " + watch.ElapsedMilliseconds + "ms");
 
+            // use dictionary to store persons
+            Dictionary<string, Person> persons2 = new Dictionary<string, Person>();
+
+            watch.Restart();
+            for (int i = 0; i < personCount; i++)
+            {
+                do
+                {
+
+                    Person p = new Person(RandomString(12), RandomString(4), RandomString(8), rand.Next(1, 100), rand.Next(30, 140), rand.Next(100, 220));
+
+                    if (!persons2.ContainsKey(p.FirstName))
+                    {
+                        persons2.Add(p.FirstName, p);
+                        break;
+                    }
+                } while (true);
+            }
+
+            watch.Stop();
+            Console.WriteLine("Adding Persons to dictionary took " + watch.ElapsedMilliseconds + " ms.");
+
+            watch.Restart();
+
+            // Find 1000 names from the dictionary
+            for (int i = 0; i < 10000; i++)
+            {
+                string nameToFind = RandomString(4);
+                Person p = null;
+                persons2.TryGetValue(nameToFind, out p);
+                if (p != null)
+                {
+                    //Console.WriteLine("Found person with firstname " + nameToFind + " : " + p.ToString());
+                }
+            }
+            watch.Stop();
+            Console.WriteLine(persons2.Count + " Persons in dictionary");
+            Console.WriteLine("Finding persons from dictionary took " + watch.ElapsedMilliseconds + " ms.");
             Console.ReadLine();
         }
     }
