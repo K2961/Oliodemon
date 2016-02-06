@@ -11,7 +11,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus13();
+            Harjoitus14();
 
             Console.ReadLine();
         }
@@ -98,7 +98,6 @@ namespace Demo1
         /// <summary>
         /// Tee ohjelma, joka kysyy käyttäjältä kolme lukua ja tulostaa niiden summan ja keskiarvon. 
         /// </summary>
-
         static void Harjoitus3()
         {
             Console.Write("Anna kolme lukua: ");
@@ -159,7 +158,6 @@ namespace Demo1
         /// Auton kulutus on 7.02 litraa 100 kilometrin matkalla ja bensan hinta on 1.595 Euroa. 
         /// Tee ohjelma, joka tulostaa ajetulla matkalla (kysytään käyttäjältä) kuluvan bensan määrän sekä bensaan menevän rahan määrän. 
         /// </summary>
-
         static void Harjoitus6()
         {
             Console.Write("Anna matka:  ");
@@ -200,7 +198,6 @@ namespace Demo1
         /// Anna Luku > 7 [Enter]
         /// Suurin luku on 15
         /// </summary>
-
         static void Harjoitus8()
         {
             int a;
@@ -313,7 +310,6 @@ namespace Demo1
         /// **
         /// ***
         /// </summary>
-        /// 
         static void Harjoitus11()
         {
             Console.Write("Anna luku:  ");
@@ -344,7 +340,6 @@ namespace Demo1
         /// Anna Luku > 5 [Enter]
         /// Luvut ovat 5,4,3,2,1
         /// </summary>
-
         static void Harjoitus12()
         {
             Console.Write("Anna 5 Lukua\n");
@@ -401,6 +396,88 @@ namespace Demo1
 
             int summa = tyylipisteet[1] + tyylipisteet[2] + tyylipisteet[3];
             Console.WriteLine("\n" + "Tyylipisteiden summa on: " + summa);
+        }
+
+        /// <summary>
+        ///Tehtävä 14
+        ///Kirjoita ohjelma, joka pyytää käyttäjältä opiskelijoiden arvosanat 0-5 ///ohjelmointi-opintojaksosta (voit itse päättää lopetusehdon). Tulosta ///arvosanajakauma käyttäen tähtimerkkejä seuraavasti:
+        ///Arvosanajakauma:
+        ///0:
+        ///1:****
+        ///2:**
+        ///3:******
+        ///4:*****
+        ///5:**
+        ///Esimerkkitoiminta:
+        ///Anna arvosana > 5 [Enter]
+        ///Anna arvosana > 5 [Enter]
+        ///Anna arvosana > 4 [Enter]
+        ///Anna arvosana > 3 [Enter]
+        ///Anna arvosana > 2 [Enter]
+        ///Anna arvosana > 1 [Enter]
+        ///Anna arvosana > 0 [Enter]
+        ///Anna arvosana > 0 [Enter]
+        ///Arvosanat:
+        ///0:**
+        ///1:*
+        ///2:*
+        ///3:*
+        ///4:*
+        ///5:**
+        /// </summary>
+        static void Harjoitus14()
+        {
+            Console.WriteLine("Anna arvosana 0-5 Ohjelmointi opintojaksosta");
+            Console.WriteLine("Lopeta arvosanojen antaminen 'L' kirjaimella!");
+
+            int[] arvosanat = new int[6];
+            int numero;
+            bool tulos;
+
+            do
+            {
+                Console.WriteLine("Anna arvosana: ");
+                string annettu = Console.ReadLine();
+                tulos = Int32.TryParse(annettu, out numero);
+                if (tulos)
+                {
+                    switch (numero)
+                    {
+                        case 0:
+                            arvosanat[0]++;
+                            break;
+                        case 1:
+                            arvosanat[1]++;
+                            break;
+                        case 2:
+                            arvosanat[2]++;
+                            break;
+                        case 3:
+                            arvosanat[3]++;
+                            break;
+                        case 4:
+                            arvosanat[4]++;
+                            break;
+                        case 5:
+                            arvosanat[5]++;
+                            break;
+                        case 'L':
+                            break;
+                    }
+                }
+
+            } while (tulos);
+            Console.WriteLine("Arvosanat: ");
+
+            for (int i = 0; i < arvosanat.Length; i++)
+            {
+                Console.Write(i + ":");
+                for (int x = 0; x < arvosanat[i]; x++)
+       
+                    Console.Write("*");
+                    Console.WriteLine();
+            }
+            Console.ReadLine();
         }
     }
 }
