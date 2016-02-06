@@ -351,10 +351,9 @@ namespace Demo1
 
             string []luvut = new string[6];
             string []kysy = { "Anna luku1", "Anna luku2", "Anna luku3", "Anna luku4", "Anna luku5" };
-            int i;
             string kysymys;
             
-            for ( i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 kysymys = kysy[i];
                 Console.WriteLine("\n" + kysymys);
@@ -382,7 +381,26 @@ namespace Demo1
         /// </summary>
         static void Harjoitus13()
         {
-            Console.Write("Olet arvostelutuomari mäkihypyssä.\n" + "\nAnna pisteet: \n");
+            string[] kysy = { "Anna tyylipisteet 1: ", "Anna tyylipisteet 2: ", "Anna tyylipisteet 3: ", "Anna tyylipisteet 4: ", "Anna tyylipisteet 5: " };
+
+            int[] tyylipisteet = new int[5];
+
+            Console.Write("Olet arvostelutuomari mäkihypyssä.\n");
+
+            Console.WriteLine("\nHyppy suoritettu! ");
+
+
+            for (int i = 0; i < 5; i++)
+            {
+                string kysymys = kysy[i];
+                Console.WriteLine("\n" + kysymys);
+                tyylipisteet[i] = int.Parse(Console.ReadLine());
+            }
+
+            Array.Sort(tyylipisteet);
+
+            int summa = tyylipisteet[1] + tyylipisteet[2] + tyylipisteet[3];
+            Console.WriteLine("\n" + "Tyylipisteiden summa on: " + summa);
         }
     }
 }
