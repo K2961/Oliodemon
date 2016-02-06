@@ -11,7 +11,7 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Harjoitus14();
+            Harjoitus15();
 
             Console.ReadLine();
         }
@@ -476,6 +476,76 @@ namespace Demo1
        
                     Console.Write("*");
                     Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+
+        /// <summary>
+        /// Tehtävä 15
+        ///Tee ohjelma, joka tulostaa seuraavanlaisen kuvion.Kysy käyttäjältä puunkorkeus käytä juurena kaksi korkeuden yksikkö.
+        ///Anna Luku > 7 [Enter]
+        ///         *
+        ///        ***
+        ///       *****
+        ///      *******
+        ///     *********
+        ///         *
+        ///         *
+        /// </summary>
+        static void Harjoitus15()
+        {
+            int size;
+
+            Console.WriteLine(" Welcome to the tree generator!");
+
+            Console.WriteLine("\nGive the size of the tree as number: ");
+            string given = Console.ReadLine();
+            bool givenans = int.TryParse(given, out size);
+
+            int tree = size - 2;
+            int bottom = size - tree;
+
+            if (givenans)
+            {
+                if (size < 4)
+                {
+                    Console.WriteLine("That is not healthy tree!" + "\nMust be bigger size");
+                    Console.ReadLine();
+                    return;
+                }
+                else if (size > 25)
+                {
+                    Console.WriteLine("Too Big number!");
+                    Console.ReadLine();
+                    return;
+                }
+
+                for (int i = 0; i < tree; i++)
+                {
+                    int emptyspacesLength = tree - i;
+                    for (int emptyspace = 0; emptyspace <= emptyspacesLength; emptyspace++)
+                        {
+                            Console.Write(" ");
+                        }
+
+                for (int stars = 0; stars <= i * 2; stars++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+                }
+                for (int i = 0; i < bottom; i++)
+                {
+                    for (int emptyspace = 0; emptyspace <= tree; emptyspace++)
+                    {
+                        Console.Write(" ");
+                    }
+                    Console.WriteLine("*");
+                }
+            }
+            else
+            {
+                Console.WriteLine("You don't give a number!");
             }
             Console.ReadLine();
         }
