@@ -549,5 +549,21 @@ namespace Demo1
             }
             Console.ReadLine();
         }
+
+        /// <summary>
+        ///Tehtävä 16
+        ///Tee ohjelma, joka arpoo satunnaisluvun väliltä 0-100. Tämän jälkeen ///ohjelman käyttäjää kehoitetaan arvaaman arvottu luku. Ohjelman tulee ///antaa vihje arvauksen jälkeen onko arvottu luku pienemäi vai suurempi. ///Tämän jälkeen vihjeitä toistetaan kunnes käyttäjä arvaa oikean luvun. ///Tulosta lopuksi arvausten määrä näytölle.
+        ///Esimerkkitoiminta:
+        ///Arvaa luku > 50 [Enter]
+        ///Luku on suurempi
+        ///Arvaa luku > 75 [Enter]
+        ///Luku on pienempi
+        ///Arvaa luku > 66 [Enter]
+        ///Hienoa, arvasit luvun 3 kerralla.
+        /// </summary>
+        static void Harjoitus16()
+        {
+
+        }
     }
 }
