@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo3
+namespace Demo3_Task4
 {
     class Vehicle
     {
@@ -14,16 +14,16 @@ namespace Demo3
 
         public override string ToString()
         {
-            return Name + " " + " " + Speed + " " + " " + Tyres;
+            return "\nVehicle data : " + "\n- name : " + Name + "\n- Speed : " + Speed + "\n- Tyres : " + Tyres;
         }
 
-        public void PrintData()
+       /* public void PrintData()
         {
             Console.WriteLine("\nVehicle data : ");
             Console.WriteLine("\n- name : " + Name);
             Console.WriteLine("\n- Speed : " + Speed);
             Console.WriteLine("\n- Tyres : " + Tyres);
-        }
+        }*/
     }
     class Program
     {
@@ -40,8 +40,9 @@ namespace Demo3
             traktori.Speed = 60;
             traktori.Tyres = 4;
 
-            mopo.PrintData();
-            traktori.PrintData();
+            //mopo.PrintData();
+            //traktori.PrintData();
+
             Console.Write(mopo.ToString());
             Console.Write(traktori.ToString());
             Console.ReadLine();
