@@ -4,39 +4,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo4_kotitehtävä
+namespace Demo4_Task5
 {
-    class Radio
-    {
-        private int volume;
-        private int power;
-
-        public int Power
-        {
-            get { return power; }
-            set { }
-        }
-        public int Volume
-        {
-            get { return volume; }
-            set {
-                    if (value < 0)
-                    {
-                        volume = 0;
-                    }
-                    else if (value > 9)
-                    {
-                        volume = 9;
-                    }
-                    else volume = value;
-                }
-        }
-    }
     class Program
     {
         static void Main(string[] args)
         {
+            Radio radio = new Radio();
+            radio.PowerOn();
+            radio.PrintData();
 
+            do
+            {
+                Console.WriteLine("* Choose action *");
+                Console.WriteLine("1. Adjust Volume ");
+                Console.WriteLine("2. Adjust Frequency ");
+                Console.WriteLine("3. Power off ");
+
+                int action = int.Parse(Console.ReadLine());
+
+                switch (action)
+                {
+                    case 1:
+                        radio.AdjustVolume();
+                        break;
+
+                    case 2:
+                        radio.AdjustFrequency();
+                        break;
+
+                    case 3:
+                        radio.PowerOff();
+                        break;
+
+                    default:
+                        Console.WriteLine("Wrong button! ");
+                        break;
+                }
+
+                radio.PrintData();
+
+            } while (radio.Power != false);
+
+            Console.ReadLine();
         }
     }
 }

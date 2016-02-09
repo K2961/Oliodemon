@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo4", "Demo4\Demo4.csproj", "{6CBC98AC-EFEC-4629-BDFB-84171630F8A3}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "Polymorphis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus3", "Harjoitus3\Harjoitus3.csproj", "{E9AAD8CB-736A-45F6-B4F8-54064E8046B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo4 kotitehtävä", "Demo4 kotitehtävä\Demo4 kotitehtävä.csproj", "{7DC89B47-77BD-4AC9-BC30-94588B62DBF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo4 Task5", "Demo4 kotitehtävä\Demo4 Task5.csproj", "{7DC89B47-77BD-4AC9-BC30-94588B62DBF2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo5 Harjoitus3", "Demo5 Harjoitus3\Demo5 Harjoitus3.csproj", "{BD8E8878-8EF4-484B-9C3C-C4D2191F7104}"
 EndProject
