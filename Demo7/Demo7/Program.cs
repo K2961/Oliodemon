@@ -10,30 +10,39 @@ namespace Demo7
     {
         static void Main(string[] args)
         {
-
-
-            
+ 
         Console.WriteLine("Welcome to the ultimate NUMBERS saving program!");
             SaveNumbers one = new SaveNumbers();
-            one.Menu();
-            one.GetNumbers();
             one.WorkingI();
-            one.Working0();
+
             do
             {
-                one.Menu();
-                switch (one.Choice)
-                {
-                    case 1:
-                        one.GetNumbers();
-                        one.Menu();
-                        break;
+                Console.WriteLine("\n::::::::::::::::Menu::::::::::::::::::");
+                Console.WriteLine("\nAnna numerot tallennettavaksi painamalla 1 ");
+                Console.WriteLine("\nTallenna numero tiedostoon painamalla 2 ");
+                Console.WriteLine("\nLopeta ohjelman käyttö painamalla 0 ");
+                int Choice = int.Parse(Console.ReadLine());
+
+                switch (Choice)
+                {  
                     case 0:
                         one.Working0();
+                        break;
+                    case 1:
+                        one.GetNumbers();
+                        break;
+                    case 2:
+                        System.IO.StreamWriter outputFile = new System.IO.StreamWriter("test.txt");
+                        outputFile.WriteLine(one.Line);
+                        outputFile.Close();
                         break;
                 }
 
             } while (one.Working == true);
+
+            Console.WriteLine("Good Bye!");
+            Console.WriteLine("Press Enter to exit.");
+            Console.ReadLine();
         }
     }
 }

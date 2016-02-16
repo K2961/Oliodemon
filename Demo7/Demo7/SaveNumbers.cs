@@ -32,25 +32,21 @@ namespace Demo7
         public string UserInput{ get; set; }
         public bool Working { get; set; }
         public int Choice { get; set; }
-
-        public void Menu()
-        {
-            Console.WriteLine("\n::::::::::::::::Menu::::::::::::::::::");
-            Console.WriteLine("\nAnna numerot tallennettavaksi painamalla 1 ");
-            Console.WriteLine("\nLopeta ohjelman käyttö painamalla 0 ");
-            int Choice = int.Parse(Console.ReadLine());
-        }
+        public float Line { get; set; }
 
         public void GetNumbers()
         {
             Console.WriteLine("Anna luku");
-            int line = int.Parse(Console.ReadLine());
-            Console.WriteLine(line);
-        }
-
-        public void SaveDemNumbers()
-        {
-
+            try
+            {
+                float line = float.Parse(Console.ReadLine());
+                Console.WriteLine("You gave number " + line);
+                Line = line;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("You didn't give a number!");
+            }          
         }
 
         public void WorkingI()
@@ -61,8 +57,6 @@ namespace Demo7
         public void Working0()
         {
             Working = false;
-
-            Console.ReadLine();
         }
     
     }
