@@ -8,10 +8,65 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <RelativePanel HorizontalAlignment="Left" Height="400" Margin="602,245,0,0" VerticalAlignment="Top" Width="400" Background="LightBlue">
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="207"/>
-            <Button x:Name="button" Background="Salmon" Content="Button" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="105" Margin="5" RelativePanel.RightOf="textBox"/>
-            <Button x:Name="button1" Background="Tomato" Content="Button" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="105" Margin="5" RelativePanel.RightOf="textBox" RelativePanel.Below="button"/>
-        </RelativePanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="101*"/>
+                <ColumnDefinition Width="59*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1" Background="#FFFDF9CF" Margin="0,66,0,0">
+                <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="Image:" Height="78" FontSize="48" VerticalAlignment="Center" Margin="10,0,328,0"/>
+                <Image x:Name="image" Height="278" Source="Assets/images-of-man-and-woman-in-love.jpg" IsHitTestVisible="False" NineGrid="0"/>
+                <Grid Height="100">
+                    <Button x:Name="button" Content="Browse" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="127,10,125,10" FontSize="32"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Top" Margin="2,2,0,0" Height="416">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Employee Basic information:" VerticalAlignment="Top" FontSize="48" Margin="0,0,0,0" Width="751" Height="64"/>
+                <Grid Background="#FFFDF9CF">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="283*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="textBox" Grid.Column="1" Margin="10" TextWrapping="Wrap" Text="" FontSize="32"/>
+                    <TextBox x:Name="textBox_Copy" Grid.Column="1" Margin="10" TextWrapping="Wrap" Text="" Grid.Row="1" FontSize="32"/>
+                    <TextBlock x:Name="textBlock1" Margin="34,37" TextWrapping="Wrap" Text="Name:" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="textBlock1_Copy" Margin="34,38,34,37" TextWrapping="Wrap" Text="Email:" Grid.Row="1" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="textBlock1_Copy1" Margin="10" TextWrapping="Wrap" Text="Password:" Grid.Row="2" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center" Width="180" Height="97"/>
+                    <PasswordBox x:Name="passwordBox" Grid.Column="1" Margin="10,10,10,0" Grid.Row="2" VerticalAlignment="Top" Height="97"/>
+                </Grid>
+
+            </StackPanel>
+            <Grid Margin="0,418,0,0" Background="#FFFDF9CF">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="138*"/>
+                    <ColumnDefinition Width="257*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="41,10,0,0" TextWrapping="Wrap" Text="User Level:" VerticalAlignment="Top" Height="77" Width="163" FontSize="29.333"/>
+                <CheckBox x:Name="checkBox" Content="Normal User" HorizontalAlignment="Left" Margin="93,-65,0,130" VerticalAlignment="Center" Width="104" Grid.Row="2" Height="35" FontSize="14.667" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" IsTextScaleFactorEnabled="False">
+                    <CheckBox.RenderTransform>
+                        <CompositeTransform ScaleX="2" ScaleY="2"/>
+                    </CheckBox.RenderTransform>
+                </CheckBox>
+                <CheckBox x:Name="checkBox_Copy" Content="Admin" HorizontalAlignment="Left" Margin="78,-64,0,127" VerticalAlignment="Center" Width="120" Grid.Row="2" Height="32" FontSize="14.667" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                    <CheckBox.RenderTransform>
+                        <CompositeTransform ScaleX="2" ScaleY="2"/>
+                    </CheckBox.RenderTransform>
+                </CheckBox>
+                <Button x:Name="button1" Content="Save" HorizontalAlignment="Stretch" Margin="41,28,51,10" Grid.Row="2" VerticalAlignment="Stretch" FontSize="26.667"/>
+                <RadioButton x:Name="radioButton" Content="RadioButton" Grid.Column="1" HorizontalAlignment="Left" Margin="24,18,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioButton_Copy" Content="RadioButton" Grid.Column="1" HorizontalAlignment="Left" Margin="24,59,0,0" VerticalAlignment="Top"/>
+            </Grid>
+
+        </Grid>
     </Grid>
 </Page>
