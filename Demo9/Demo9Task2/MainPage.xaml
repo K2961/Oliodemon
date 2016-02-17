@@ -9,10 +9,9 @@
 
     <Grid Background="#FF505E7C">
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="47,37,0,0" TextWrapping="Wrap" Text="Euro/markka-laskuri" VerticalAlignment="Top" Height="102" Width="1150" FontSize="64" BorderThickness="0"/>
-        <TextBox x:Name="EurotBox" HorizontalAlignment="Left" Height="160" Margin="47,258,0,0" TextWrapping="Wrap" Text="Eurot" VerticalAlignment="Top" Width="800" FontSize="48" Background="#FFC7C7C7"/>
-        <TextBox x:Name="MarkatBox" HorizontalAlignment="Left" Height="160" Margin="47,503,0,0" TextWrapping="Wrap" Text="Markat" VerticalAlignment="Top" Width="800" FontSize="48" Background="#FFC7C7C7"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="934,258,0,0" VerticalAlignment="Top" Height="160" Width="263" FontSize="48"/>
-        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="934,503,0,0" VerticalAlignment="Top" Height="160" Width="263" FontSize="48"/>
-
+        <TextBox x:Name="EurotBox" HorizontalAlignment="Left" Margin="438,138,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:Name="MarkatBox" HorizontalAlignment="Left" Margin="768,138,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="110"/>
+        <Button x:Name="MarkatButton" Content="Markoiksi" HorizontalAlignment="Left" Margin="588,108,0,0" VerticalAlignment="Top" Click="MarkatButton_Click"/>
+        <Button x:Name="EurotButton" Content="Euroiksi" HorizontalAlignment="Left" Margin="588,168,0,0" VerticalAlignment="Top" Width="89" Click="EurotButton_Click"/>
     </Grid>
 </Page>
