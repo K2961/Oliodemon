@@ -50,7 +50,7 @@
                x:Name="ResultTextBlock"
                FontSize="24"
                FontWeight="Bold"
-               Margin="20,20,0,0"/>
+               Margin="0,0,0,0"/>
         </Grid>
     </Grid>
 
