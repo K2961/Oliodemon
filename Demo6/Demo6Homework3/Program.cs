@@ -22,7 +22,7 @@ namespace Demo6Homework3
         }*/
         static void Main(string[] args)
         {
-            string[] Country = { "Pata", "Hertta", "Ruutu", "Risti" };
+            /*string[] Country = { "Pata", "Hertta", "Ruutu", "Risti" };
             int[] NumberCards = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             string[] LetterCards = { "A", "J", "Q", "K" };
             int counter = 0;
@@ -65,9 +65,9 @@ namespace Demo6Homework3
 
                 }
 
-            }
+            }*/
 
-            Console.WriteLine("\nThere are: " + counter + " cards on the deck.");
+           // Console.WriteLine("\nThere are: " + counter + " cards on the deck.");
             Console.ReadLine();
         }
     }
