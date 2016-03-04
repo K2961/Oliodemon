@@ -7,8 +7,8 @@
     <ProjectGuid>{82332A6F-59A0-4619-93CD-BA8DD5B07BBE}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo4_Task6</RootNamespace>
-    <AssemblyName>Demo4 Task6</AssemblyName>
+    <RootNamespace>Demo4Task6</RootNamespace>
+    <AssemblyName>Demo4Task6</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
