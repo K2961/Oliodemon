@@ -15,7 +15,16 @@ namespace Demo7Task3
     {
         static void Main(string[] args)
         {
-            TVProgram prog = new TVProgram();
+            TVProgram prog1 = new TVProgram();
+
+            prog1.Name = "Dancing with devils.";
+            prog1.Channel = "Channel 4";
+            prog1.StartingTime = "21:00";
+            prog1.EndingTime = "0:00";
+            prog1.Description = "This Anime movie is telling about young girl's life in middle of schooldrama";
+
+            prog1.ToString();
+            Console.ReadLine();
         }
     }
 }

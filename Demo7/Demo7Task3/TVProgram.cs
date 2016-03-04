@@ -10,10 +10,13 @@ namespace Demo7Task3
     {
         public string Name { get; set; }
         public string Channel { get; set; }
-        public int StartingTime { get; set; }
-        public int EndingTime { get; set; }
+        public string StartingTime { get; set; }
+        public string EndingTime { get; set; }
         public string Description { get; set; }
 
-       
+        public override string ToString()
+        {
+            return "Program name:" + Name + Channel + StartingTime + EndingTime + Description;
+        }
     }
 }
