@@ -16,7 +16,10 @@ namespace Demo7Task3
 
         public override string ToString()
         {
+            Console.WriteLine("Program name:" + Name + Channel + StartingTime + EndingTime + Description);
+
             return "Program name:" + Name + Channel + StartingTime + EndingTime + Description;
+            
         }
     }
 }
