@@ -10,6 +10,7 @@ namespace Demo3Task6
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to use secure keycodepad");
         }
     }
 }
