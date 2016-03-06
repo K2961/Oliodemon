@@ -26,5 +26,18 @@ namespace Demo10Task1
         {
             this.InitializeComponent();
         }
+
+        private void BuyButton_Click(object sender, RoutedEventArgs e)
+        {
+            string products = "";
+
+            if ((bool)checkBox1.IsChecked) products += checkBox1.Content + " ";
+            if ((bool)checkBox2.IsChecked) products += checkBox2.Content + " ";
+            if ((bool)checkBox3.IsChecked) products += checkBox3.Content + " ";
+            if ((bool)checkBox4.IsChecked) products += checkBox4.Content + " ";
+            if ((bool)checkBox5.IsChecked) products += checkBox5.Content + " ";
+
+            textBox1.Text = products;
+        }
     }
 }
