@@ -21,7 +21,7 @@ namespace Demo4Task7
             PersonalID = personalid;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return base.ToString() + "\nPersonal identification number: " + PersonalID + "\n";
         }

@@ -21,7 +21,7 @@ namespace Demo4Task7
             OfficerID = officerid;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return base.ToString() + "\nArmy officer ID:  " + OfficerID + "\n";
         }

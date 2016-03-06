@@ -10,6 +10,13 @@ namespace Demo5Task4
     {
         static void Main(string[] args)
         {
+            List<Building> apartments = new List<Building>();
+            apartments.Add(new Building("Aholaita kerrostalo"));
+
+            List<Apartment> Apart = new List<Apartment>();
+            Apart.Add(new Apartment("54","Mikko Ahomaa", "49", "2"));
+
+            Console.ReadLine();
         }
     }
 }
