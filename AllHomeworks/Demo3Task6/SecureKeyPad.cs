@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace Demo3Task6
 {
+    /// <summary>
+    /// This is a keypad used for doorlock opening and it's passcode is only visible for this class using private property.
+    /// </summary>
     class SecureKeyPad
     {
-        public int usercode = 0;
-
+        public int usercode {get; set;}
         private int passcode = 4521;
+        public bool keypadon { get; set; }
         
         public int PassCode
         {
@@ -20,17 +23,30 @@ namespace Demo3Task6
             }
             set
             {
-                if (value == passcode)
+                if (usercode == passcode)
                 {
-                    passcode = value;
-                    Console.WriteLine("Correct Code, Welcome!");
+                    Console.WriteLine("\nCorrect Code Dude, Welcome!");
                     Console.ReadLine();
+                    KeyPadOff();
+ 
                 }
                 else
                 {
-                    Console.WriteLine("Wrong Code, Try again!");
+                    Console.WriteLine("\nWrong Code, Try again!" + "\n");
                 }
             }
+        }
+        public void KeyPadOn()
+        {
+            keypadon = true;
+        }
+        public void KeyPadOff()
+        {
+            keypadon = false;
+        }
+        public void CheckCode()
+        {
+            PassCode = usercode;
         }
     }
 }
