@@ -24,19 +24,48 @@ namespace Demo11
     /// 
     public sealed partial class MainPage : Page
     {
+        // employee image model
+        public EmployeeImageViewModel ImageViewModel { get; set; }
+        // employees model
         public EmployeeViewModel ViewModel { get; set; }
 
         public MainPage()
         {
             this.InitializeComponent();
 
-            ViewModel = new EmployeeViewModel();
+            // initialize view models
+            this.ImageViewModel = new EmployeeImageViewModel();
+            this.ViewModel = new EmployeeViewModel();
         }
-        // show selected employees name below list view
-        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
+
+        // New-Button control is clicked
+        private void NewEmployeeButton_Click(object sender, RoutedEventArgs e)
         {
-            Employee employee = (Employee)e.ClickedItem;
-            ResultTextBlock.Text = "Selected employee: " + employee.Firstname + " " + employee.Lastname;
+            // add a new employee
+            EmployeeImage employeeImage = (EmployeeImage)ImageComboBox.SelectedValue;
+            ViewModel.AddEmployee(FirstnameTextBox.Text, LastnameTextBox.Text, JobTitleTextBox.Text, employeeImage);
+
+            // empty UI fields
+            FirstnameTextBox.Text = "";
+            LastnameTextBox.Text = "";
+            JobTitleTextBox.Text = "";
+            ImageComboBox.SelectedIndex = -1;
+
+            // select firstname
+            FirstnameTextBox.Focus(FocusState.Programmatic);
+
+        }
+        private void ListView_ItemClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ModifyEmployeeButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void DeleteEmployeeButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
