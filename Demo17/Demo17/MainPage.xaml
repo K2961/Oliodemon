@@ -13,5 +13,13 @@
             <Button x:Name="HighscoreButton" Content="Highscores" Width="200" Margin="5" Click="HighscoreButton_Click"/>
             <Button x:Name="InstructionsButton" Content="Instructions" Width="200" Margin="5" Click="InstructionsButton_Click"/>
         </StackPanel>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Margin="535,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="205"/>
+        <TextBox x:Name="lastnameBox" HorizontalAlignment="Left" Margin="535,221,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="205" Height="14"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="21" Margin="535,99,0,0" TextWrapping="Wrap" Text="Enter your firstname" VerticalAlignment="Top" Width="205"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="21" Margin="535,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205">
+        	<Run Text="Enter your "/>
+        	<Run Text="lastname"/>
+        </TextBlock>
+        <HyperlinkButton Content="HyperlinkButton" HorizontalAlignment="Left" Margin="558,449,0,0" VerticalAlignment="Top" Width="162" Click="HyperlinkButton_Click_1"/>
     </Grid>
 </Page>

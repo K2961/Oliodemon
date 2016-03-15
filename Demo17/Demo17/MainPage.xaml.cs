@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -41,6 +42,17 @@ namespace Demo17
         private void InstructionsButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            Person person = new Person() { Firstname = nameBox.Text, Lastname = lastnameBox.Text };
+            this.Frame.Navigate(typeof(GamePage), person);
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            Debug.WriteLine("Number is " + (App.Current as App).Number);
         }
     }
 }
